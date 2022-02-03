@@ -21,6 +21,13 @@ db.connect((err) => {
     console.log('Connected to database')
 })
 
+//Set view engine
+app.set('view engine', 'ejs')
+
+//Load assets
+app.use(express.static('public'))
+
+//Routes
 app.get('/', (req, res) => {
     res.send('Project start!')
 })
