@@ -24,12 +24,12 @@ db.connect((err) => {
 //Set view engine
 app.set('view engine', 'ejs')
 
-//Load assets
+//Static public folder
 app.use(express.static('public'))
 
 //Routes
 app.get('/', (req, res) => {
-    res.send('Project start!')
+    res.render('index')
 })
 
 //Server start
